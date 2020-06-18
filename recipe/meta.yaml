@@ -1,0 +1,35 @@
+{% set name = "nsls2-detector-handlers" %}
+{% set version = "0.0.1" %}
+{% set sha256 = "2707b441215e5b29d2cfdb1af00f1efb847cde6ca748f0a9f1259e0b59197aba" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: {{ sha256 }}
+
+build:
+  number: 0
+  noarch: python
+  script: {{ PYTHON }} -m pip install . -vv
+
+requirements:
+  host:
+    - python
+    - pip
+  run:
+    - python
+    - h5py
+
+test:
+  imports:
+    - nsls2_detector_handlers
+
+about:
+  home: https://github.com/bluesky/nsls2-detector-handlers
+  license: BSD-3-Clause
+  license_family: BSD
+  license_file: LICENSE
+  summary: Staging repo for handlers specific to NSLS-II
