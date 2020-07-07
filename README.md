@@ -5,7 +5,7 @@ Home: https://github.com/bluesky/nsls2-detector-handlers
 
 Package license: BSD-3-Clause
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: Staging repo for handlers specific to NSLS-II
 
